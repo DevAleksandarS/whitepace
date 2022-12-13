@@ -1,0 +1,244 @@
+@import "./reset.sass"
+@import "./config.sass"
+
+@mixin center($width)
+  width: $width
+  margin: 0 auto
+
+@mixin font-set($font, $weight, $size, $line-height, $letter-spacing)
+  font-family: $font
+  font-weight: $weight
+  font-size: $size
+  line-height: $line-height
+  letter-spacing: $letter-spacing
+
+@mixin second-heading($text-color)
+  @include font-set($main-font, 700, 7.2rem, 8.7rem, -0.3rem)
+  color: $text-color
+
+@mixin txt-under-heading($text-color)
+  @include font-set($main-font, 400, 1.8rem, 3rem, -0.03rem)
+  margin-top: 2.4rem
+  color: $text-color
+
+@mixin main-btn($margin-top)
+  @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
+  color: $white
+  background: $light-blue
+  border: 0
+  border-radius: $btn-border-radius
+  padding: 2rem 4rem
+  margin-top: $margin-top
+  
+@mixin svg-cta()
+  margin-left: 1rem
+  width: 1.3rem
+  height: 1.3rem
+
+.navbar
+  width: 100vw
+  padding: 1.4rem 0
+  background: $dark-blue
+
+  .navbar-container
+    @include center(140rem)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .navbar-btns
+      display: flex
+      align-items: center
+      gap: 7.5rem
+
+      .navbar-menu
+        list-style-type: none
+        display: flex
+        gap: 3.2rem
+        @include font-set($nav-link-font, 500, 1.8rem, 2.3rem, null)
+
+        .nav-menu
+
+          .nav-menu-links
+            color: $white
+            text-decoration: none
+            display: flex
+            align-items: center
+            gap: 1rem
+
+            .svg-nav
+              width: 0.9rem
+              height: 0.4rem
+
+      .cta-btns
+        display: flex
+        gap: 2.4rem
+
+        .cta-btn
+          @include font-set($main-font, 500, 1.8rem, 2.3rem, null)
+          border: 0
+          border-radius: $btn-border-radius
+
+        .login-cta
+          color: $dark-blue
+          background: $yellow
+          padding: 1.85rem 4rem
+
+        .free-trial-cta
+          color: $white
+          background: $light-blue
+          padding: 2rem
+
+          .svg-cta
+            @include svg-cta
+        
+.hero-section
+  width: 100vw
+  background: $dark-blue
+  padding: 14rem 0
+  z-index: -2
+  position: relative
+  overflow: hidden
+  
+  .hero-vector
+    position: absolute
+    z-index: -1
+    width: 120vw
+
+  .hero-container
+    @include center(140rem)
+    display: flex
+
+    .hero-txt-side
+      width: calc( 140rem - 75rem )
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+      .hero-heading
+        @include font-set($main-font, 700, 6.4rem, 7.7rem, -0.3rem)
+        color: $white
+
+      .hero-txt
+        margin-top: 2.4rem
+        @include font-set($main-font, 400, 1.8rem, 3rem, null)
+        color: $white
+
+      .cta-btn-hero
+        @include main-btn(6rem)
+        width: 23.5rem
+        padding: 2rem !important
+
+        .svg-cta
+          @include svg-cta
+
+    .hero-img
+      height: 50rem
+
+.work-menagment-section
+  width: 100vw
+  padding: 14rem 0
+
+  .work-menagment-container
+    @include center(140rem)
+
+    .project-menagment
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .project-menagment-txt-side
+        width: 67.2rem
+        position: relative
+
+        .project-menagment-heading
+          @include second-heading(null)
+
+        .project-menagment-under-text-decoration
+          position: absolute
+          transform: translateY(-100%)
+          z-index: -1
+
+        .project-menagment-text
+          @include txt-under-heading(null)
+
+        .project-menagment-btn
+          @include main-btn(6rem)
+
+          .svg-cta
+            @include svg-cta
+
+      .project-menagment-img
+          width: 67.2rem
+          height: 54.7rem
+
+    .work-together
+      margin-top: 10rem
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .work-together-image
+        width: 71rem
+        margin-right: 10rem
+      
+      .work-together-txt-side
+        position: relative
+
+        .work-together-heading
+          @include second-heading(null)
+
+        .work-together-under-text-decoration
+          width: 40rem
+          position: absolute
+          transform: translateY(-120%)
+          left: 35%
+          z-index: -1
+
+        .work-together-text
+          @include txt-under-heading(null)
+
+        .work-together-btn
+          @include main-btn(6rem)
+
+          .svg-cta
+            @include svg-cta
+
+.extension-section
+  padding: 14rem 0
+  background: $dark-blue
+  position: relative
+  z-index: -2
+
+  .extension-container
+    @include center(140rem)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .extension-txt-side
+      width: 69.7rem
+      position: relative
+
+      .extension-heading
+        @include second-heading($white)
+
+      .extension-under-text-decoration
+        width: 50rem
+        position: absolute
+        transform: translateY(-105%)
+        left: 32%
+        z-index: -1
+
+      .extension-text
+        @include txt-under-heading($white)
+
+      .extension-btn
+        @include main-btn(6rem)
+        
+        .svg-cta
+          @include svg-cta
+
+    .extension-img
+      width: 60rem
+      height: 47rem
