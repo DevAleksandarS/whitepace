@@ -1,0 +1,640 @@
+@import "./reset.sass"
+@import "./config.sass"
+
+@mixin center($width)
+  width: $width
+  margin: 0 auto
+
+@mixin font-set($font, $weight, $size, $line-height, $letter-spacing)
+  font-family: $font
+  font-weight: $weight
+  font-size: $size
+  line-height: $line-height
+  letter-spacing: $letter-spacing
+
+@mixin second-heading($text-color)
+  @include font-set($main-font, 700, 7.2rem, 8.7rem, -0.3rem)
+  color: $text-color
+
+@mixin txt-under-heading($text-color)
+  @include font-set($main-font, 400, 1.8rem, 3rem, -0.03rem)
+  margin-top: 2.4rem
+  color: $text-color
+
+@mixin main-btn($margin-top)
+  @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
+  color: $white
+  background: $light-blue
+  border: 0
+  border-radius: $btn-border-radius
+  padding: 2rem 4rem
+  margin-top: $margin-top
+  
+@mixin svg-cta()
+  margin-left: 1rem
+  width: 1.3rem
+  height: 1.3rem
+
+.navbar
+  width: 100vw
+  padding: 1.4rem 0
+  background: $dark-blue
+
+  .navbar-container
+    @include center(140rem)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .navbar-btns
+      display: flex
+      align-items: center
+      gap: 7.5rem
+
+      .navbar-menu
+        list-style-type: none
+        display: flex
+        gap: 3.2rem
+        @include font-set($nav-link-font, 500, 1.8rem, 2.3rem, null)
+
+        .nav-menu
+
+          .nav-menu-links
+            color: $white
+            text-decoration: none
+            display: flex
+            align-items: center
+            gap: 1rem
+
+            .svg-nav
+              width: 0.9rem
+              height: 0.4rem
+
+      .cta-btns
+        display: flex
+        gap: 2.4rem
+
+        .cta-btn
+          @include font-set($main-font, 500, 1.8rem, 2.3rem, null)
+          border: 0
+          border-radius: $btn-border-radius
+
+        .login-cta
+          color: $dark-blue
+          background: $yellow
+          padding: 1.85rem 4rem
+
+        .free-trial-cta
+          color: $white
+          background: $light-blue
+          padding: 2rem
+
+          .svg-cta
+            @include svg-cta
+        
+.hero-section
+  width: 100vw
+  background: $dark-blue
+  padding: 14rem 0
+  z-index: -2
+  position: relative
+  overflow: hidden
+  
+  .hero-vector
+    position: absolute
+    z-index: -1
+    width: 120vw
+
+  .hero-container
+    @include center(140rem)
+    display: flex
+
+    .hero-txt-side
+      width: calc( 140rem - 75rem )
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+      .hero-heading
+        @include font-set($main-font, 700, 6.4rem, 7.7rem, -0.3rem)
+        color: $white
+
+      .hero-txt
+        margin-top: 2.4rem
+        @include font-set($main-font, 400, 1.8rem, 3rem, null)
+        color: $white
+
+      .cta-btn-hero
+        @include main-btn(6rem)
+        width: 23.5rem
+        padding: 2rem !important
+
+        .svg-cta
+          @include svg-cta
+
+    .hero-img
+      height: 50rem
+
+.work-menagment-section
+  width: 100vw
+  padding: 14rem 0
+
+  .work-menagment-container
+    @include center(140rem)
+
+    .project-menagment
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .project-menagment-txt-side
+        width: 67.2rem
+        position: relative
+
+        .project-menagment-heading
+          @include second-heading(null)
+
+        .project-menagment-under-text-decoration
+          position: absolute
+          transform: translateY(-100%)
+          z-index: -1
+
+        .project-menagment-text
+          @include txt-under-heading(null)
+
+        .project-menagment-btn
+          @include main-btn(6rem)
+
+          .svg-cta
+            @include svg-cta
+
+      .project-menagment-img
+          width: 67.2rem
+          height: 54.7rem
+
+    .work-together
+      margin-top: 10rem
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .work-together-image
+        width: 71rem
+        margin-right: 10rem
+      
+      .work-together-txt-side
+        position: relative
+
+        .work-together-heading
+          @include second-heading(null)
+
+        .work-together-under-text-decoration
+          width: 40rem
+          position: absolute
+          transform: translateY(-120%)
+          left: 35%
+          z-index: -1
+
+        .work-together-text
+          @include txt-under-heading(null)
+
+        .work-together-btn
+          @include main-btn(6rem)
+
+          .svg-cta
+            @include svg-cta
+
+.extension-section
+  padding: 14rem 0
+  background: $dark-blue
+  position: relative
+  z-index: -2
+
+  .extension-container
+    @include center(140rem)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .extension-txt-side
+      width: 69.7rem
+      position: relative
+
+      .extension-heading
+        @include second-heading($white)
+
+      .extension-under-text-decoration
+        width: 50rem
+        position: absolute
+        transform: translateY(-105%)
+        left: 32%
+        z-index: -1
+
+      .extension-text
+        @include txt-under-heading($white)
+
+      .extension-btn
+        @include main-btn(6rem)
+        
+        .svg-cta
+          @include svg-cta
+
+    .extension-img
+      width: 60rem
+      height: 47rem
+
+.customisable-section
+  padding: 14rem 0
+
+  .customisable-container
+    @include center(140rem)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .customisable-image
+      width: 71.4rem
+      height: 53.2rem
+
+    .customisable-txt-side
+      width: 60rem
+      position: relative
+
+      .customisable-heading
+        @include second-heading(null)
+
+      .customisable-under-text-decoration
+        width: 60rem
+        position: absolute
+        transform: translateY(-100%)
+        z-index: -1
+
+      .customisable-text
+        @include txt-under-heading(null)
+
+      .customisable-btn
+        @include main-btn(6rem)
+        
+        .svg-cta
+          @include svg-cta
+
+.pricing-section
+  @include center(140rem)
+  margin-top: 14rem
+  margin-bottom: 14rem
+  text-align: center
+  position: relative
+
+  .pricing-heading
+    @include second-heading(null)
+
+  .pricing-txt-under-decoration
+    width: 45rem
+    position: absolute
+    transform: translateY(-105%)
+    left: 69rem
+    z-index: -1
+
+  .pricing-text
+    @include txt-under-heading(null)
+
+  .price-list
+    margin-top: 6rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 3.2rem
+
+    .price-card
+      text-align: left
+      width: calc( 140rem / 3 )
+      border-radius: $card-border-radius
+
+    .white-card
+      border: 1px solid $yellow
+      padding: 4rem 4.4rem 
+
+      .card-heading-text
+        @include font-set($main-font, 600, 2.4rem, 3.6rem, null)
+
+      .card-price
+        @include font-set($main-font, 700, 3.6rem, 4.35rem, -0.03rem)
+        margin-top: 2.5rem
+
+      .card-text
+        @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
+        margin-top: 2.5rem
+
+      .card-desc-list
+        list-style: none
+        @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
+        margin-top: 2.5rem
+        display: flex
+        flex-direction: column
+        gap: 2.8rem
+
+        li
+          display: flex
+          align-items: center
+          gap: 1.9rem
+
+          img
+            width: 1.8rem
+            height: 1.8rem
+
+      .white-price-btn
+        @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
+        background: $white
+        border: 0
+        border-radius: $btn-border-radius
+        padding: 2rem 4rem
+        margin-top: 2.5rem
+        border: 1px solid $yellow
+
+    .blue-card
+      background: $dark-blue
+      padding: 8rem 4.4rem 
+
+      .card-heading-text
+        @include font-set($main-font, 600, 2.4rem, 3.6rem, null)
+        color: $white
+
+      .card-price
+        @include font-set($main-font, 700, 3.6rem, 4.35rem, -0.03rem)
+        color: $yellow
+        margin-top: 2.5rem
+
+      .card-text
+        @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
+        color: $white
+        margin-top: 2.5rem
+
+      .card-desc-list
+        list-style: none
+        color: $white
+        @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
+        margin-top: 2.5rem
+        display: flex
+        flex-direction: column
+        gap: 2.8rem
+
+        li
+          display: flex
+          align-items: center
+          gap: 1.9rem
+
+          img
+            width: 1.8rem
+            height: 1.8rem
+
+      .blue-price-btn
+        @include main-btn(2.5rem)
+
+.your-work-section
+  background: $dark-blue
+  padding: 14rem 0
+  position: relative
+  z-index: -2
+  overflow: hidden
+
+  .your-work-vector
+    position: absolute
+    top: -30%
+
+  .your-work-container
+    @include center(140rem)
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+
+    .your-work-heading
+      @include second-heading($white)
+
+    .your-work-under-text-decoration
+      top: 20%
+      left: 68%
+      position: absolute
+      z-index: -1
+
+    .your-work-text
+      @include txt-under-heading($white)
+      text-align: center
+
+    .your-work-btn
+      @include main-btn(6rem)
+        
+      .svg-cta
+        @include svg-cta
+
+.your-data-section
+  padding: 14rem 0
+
+  .your-data-container
+    @include center(140rem)
+    display: flex
+    align-items: center
+
+    .your-data-txt-side
+      position: relative
+
+      .your-data-heading
+        @include second-heading(null)
+
+      .your-data-under-text-decoration
+        width: 43rem
+        height: 7.5rem
+        top: 5%
+        left: 25%
+        position: absolute
+        z-index: -1
+
+      .your-data-text
+        @include txt-under-heading(null)
+
+      .your-data-btn
+        @include main-btn(6rem)
+        
+        .svg-cta
+          @include svg-cta
+
+    .your-data-img
+      width: 60rem
+
+.sponsors-section
+  padding: 14rem 0
+
+  .sponsors-container
+    @include center(140rem)
+    position: relative
+
+    .sponsors-heading
+      @include second-heading(null)
+      text-align: center
+
+    .sponsors-under-text-decoration
+      position: absolute
+      width: 45rem
+      height: 7rem
+      left: 44.5%
+      top: 9.5%
+      z-index: -1
+
+    .sponsors-images
+      margin-top: 10rem
+      display: flex
+      justify-content: space-between
+
+      img
+        height: 6.8rem
+
+.apps-section
+  padding: 14rem 0
+  background: $dark-blue
+  position: relative
+  z-index: -2
+  overflow: hidden
+
+  .apps-vector
+    position: absolute
+    top: 0
+
+  .apps-container
+    @include center(140rem)
+    display: flex
+    align-items: center
+    gap: 10rem
+
+    .apps-txt-side
+
+      .apps-heading
+        @include second-heading($white)
+
+      .apps-text
+        @include txt-under-heading($white)
+
+      .apps-btn
+        @include main-btn(6rem)
+        
+        .svg-cta
+          @include svg-cta
+
+.testimonial-section
+  @include center(140rem)
+  padding: 14rem 0
+
+  .testimonial-heading
+    @include second-heading(null)
+    text-align: center
+
+  .testimonials
+    display: flex
+    gap: 3.2rem
+    margin-top: 6rem
+
+    .card
+      padding: 6rem 4rem
+      border-radius: $card-border-radius
+
+    .testimonial-white-card
+      box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1)
+
+      .text-part
+        width: 39.1rem
+        display: flex
+        flex-direction: column
+        padding-bottom: 4rem
+        border-bottom: 1px solid #212529
+
+        .quote
+          width: 8.6rem
+
+        .testimonial-txt
+          @include txt-under-heading(null)
+
+      .person-part
+        margin-top: 6rem 
+        display: flex
+        gap: 4.2rem
+
+        .person-img
+          width: 9.5rem
+          height: 9.5rem
+
+        .person-info
+
+          .name
+            @include font-set($main-font, 600, 2.4rem, 3.6rem, null)
+            color: #212529
+
+          .info
+            width: calc( 39.1rem - 4.2rem - 9.5rem )
+            margin-top: 1.5rem 
+            @include font-set($main-font, 400, 1.6rem, 2rem, -0.03rem)
+            color: #212529
+
+    .testimonial-blue-card
+      background: $light-blue
+
+      .text-part
+        width: 39.1rem
+        display: flex
+        flex-direction: column
+        padding-bottom: 4rem
+        border-bottom: 1px solid $white
+
+        .quote
+          width: 8.6rem
+
+        .testimonial-txt
+          @include txt-under-heading($white)
+
+      .person-part
+        margin-top: 6rem 
+        display: flex
+        gap: 4.2rem
+
+        .person-img
+          width: 9.5rem
+          height: 9.5rem
+
+        .person-info
+
+          .name
+            @include font-set($main-font, 600, 2.4rem, 3.6rem, null)
+            color: $dark-blue
+
+          .info
+            width: calc( 39.1rem - 4.2rem - 9.5rem )
+            margin-top: 1.5rem 
+            @include font-set($main-font, 400, 1.6rem, 2rem, -0.03rem)
+            color: $white
+
+.free-trial-section
+  padding: 14rem 0 3.2rem 0
+  background: $dark-blue
+
+  .free-trial-container
+    @include center(60.8rem)
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+    .free-trial-heading
+      @include second-heading($white)
+
+    .free-trial-text
+      @include txt-under-heading($white)
+
+    .free-trial-btn
+      @include main-btn(4rem)
+      margin-bottom: calc( 4rem - 2.4rem )
+        
+      .svg-cta
+        @include svg-cta
+
+    .free-trial-apps
+      margin-top: 4rem
+      display: flex
+      gap: 4rem
