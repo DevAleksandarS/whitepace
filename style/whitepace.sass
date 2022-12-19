@@ -638,3 +638,97 @@
       margin-top: 4rem
       display: flex
       gap: 4rem
+
+.footer
+  padding-top: 14rem
+  background: $dark-blue
+
+  .footer-container
+    @include center(140rem)
+
+    .footer-flex
+      display: flex
+      gap: 10rem
+
+      div
+        width: calc( (140rem - 4 * 10rem) / 5 )
+
+        .under-logo-text
+          @include txt-under-heading($white)
+
+        h4
+          @include font-set($main-font, 700, 1.8rem, 2.18rem, -0.03rem)
+          color: $white
+
+        ul
+          list-style: none
+
+          li
+            margin-top: 1.6rem
+
+            a
+              @include font-set($main-font, 400, 1.6rem, 2rem, -0.03rem)
+              color: $white
+              text-decoration: none
+
+              &:hover
+                text-decoration: underline
+
+            .yellow-link
+              color: $yellow
+
+        h3
+          @include font-set($main-font, 700, 2.8rem, 3.6rem, -0.03rem)
+          color: $white
+
+        .free-text
+          @include txt-under-heading($white)
+
+        .footer-btn
+          @include main-btn(4rem)
+          margin-bottom: calc( 4rem - 2.4rem )
+        
+          .svg-cta
+            @include svg-cta
+
+    .line
+      height: 1px
+      width: 100%
+      background: #2E4E73
+      margin-top: 6.7rem
+      
+    .footer-bottom
+      padding: 3.3rem 0
+
+      .terms
+        display: flex
+        gap: 6rem
+        align-items: center
+
+        .lang
+          cursor: pointer
+          display: flex
+          align-items: center
+          gap: 0.6rem
+
+          p
+            @include font-set($main-font, 400, 1.6rem, 2rem, -0.03rem)
+            color: $white
+
+          .globe
+            width: 1.9rem
+            height: 1.9rem
+
+          .arrow-down
+            width: 1.2rem
+            height: 0.6rem
+
+        a
+          @include font-set($main-font, 400, 1.6rem, 2rem, -0.03rem)
+          color: $white
+          text-decoration: none
+
+          &:hover
+            text-decoration: underline
+
+

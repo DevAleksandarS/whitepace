@@ -919,4 +919,142 @@ html {
   margin-top: 4rem;
   display: flex;
   gap: 4rem;
+}
+
+.footer {
+  padding-top: 14rem;
+  background: #043873;
+}
+.footer .footer-container {
+  width: 140rem;
+  margin: 0 auto;
+}
+.footer .footer-container .footer-flex {
+  display: flex;
+  gap: 10rem;
+}
+.footer .footer-container .footer-flex div {
+  width: 20rem;
+}
+.footer .footer-container .footer-flex div .under-logo-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: -0.03rem;
+  margin-top: 2.4rem;
+  color: #FFFFFF;
+}
+.footer .footer-container .footer-flex div h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.18rem;
+  letter-spacing: -0.03rem;
+  color: #FFFFFF;
+}
+.footer .footer-container .footer-flex div ul {
+  list-style: none;
+}
+.footer .footer-container .footer-flex div ul li {
+  margin-top: 1.6rem;
+}
+.footer .footer-container .footer-flex div ul li a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.03rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer .footer-container .footer-flex div ul li a:hover {
+  text-decoration: underline;
+}
+.footer .footer-container .footer-flex div ul li .yellow-link {
+  color: #FFE492;
+}
+.footer .footer-container .footer-flex div h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.03rem;
+  color: #FFFFFF;
+}
+.footer .footer-container .footer-flex div .free-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: -0.03rem;
+  margin-top: 2.4rem;
+  color: #FFFFFF;
+}
+.footer .footer-container .footer-flex div .footer-btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  letter-spacing: -0.03rem;
+  color: #FFFFFF;
+  background: #4F9CF9;
+  border: 0;
+  border-radius: 0.8rem;
+  padding: 2rem 4rem;
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+}
+.footer .footer-container .footer-flex div .footer-btn .svg-cta {
+  margin-left: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.footer .footer-container .line {
+  height: 1px;
+  width: 100%;
+  background: #2E4E73;
+  margin-top: 6.7rem;
+}
+.footer .footer-container .footer-bottom {
+  padding: 3.3rem 0;
+}
+.footer .footer-container .footer-bottom .terms {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+.footer .footer-container .footer-bottom .terms .lang {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.footer .footer-container .footer-bottom .terms .lang p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.03rem;
+  color: #FFFFFF;
+}
+.footer .footer-container .footer-bottom .terms .lang .globe {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+.footer .footer-container .footer-bottom .terms .lang .arrow-down {
+  width: 1.2rem;
+  height: 0.6rem;
+}
+.footer .footer-container .footer-bottom .terms a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -0.03rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer .footer-container .footer-bottom .terms a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=whitepace.css.map */
