@@ -2,60 +2,6 @@
 @import "./config.sass"
 @import "./media-query.sass"
 
-@mixin center($width)
-  width: $width
-  margin: 0 auto
-
-@mixin font-set($font, $weight, $size, $line-height, $letter-spacing)
-  font-family: $font
-  font-weight: $weight
-  font-size: $size
-  line-height: $line-height
-  letter-spacing: $letter-spacing
-
-@mixin second-heading($text-color)
-  @include font-set($main-font, 700, 7.2rem, 8.7rem, -0.3rem)
-  color: $text-color
-
-@mixin txt-under-heading($text-color)
-  @include font-set($main-font, 400, 1.8rem, 3rem, -0.03rem)
-  margin-top: 2.4rem
-  color: $text-color
-
-@mixin main-btn($margin-top)
-  @include font-set($main-font, 500, 1.8rem, 2.3rem, -0.03rem)
-  color: $white
-  background: $light-blue
-  border: 0
-  border-radius: $btn-border-radius
-  padding: 2rem 4rem
-  margin-top: $margin-top
-  
-@mixin svg-cta()
-  margin-left: 1rem
-  width: 1.3rem
-  height: 1.3rem
-
-@mixin section()
-  width: 100vw
-  padding: 14rem 0
-  z-index: -2
-  position: relative
-  overflow: hidden
-
-  .container
-    @include center(140rem)
-    display: flex
-    align-items: center
-
-  .column
-    flex-direction: column !important
-
-  .vector
-    position: absolute
-    z-index: -1
-    top: 0
-
 .navbar
   width: 100vw
   padding: 1.4rem 0
@@ -93,6 +39,7 @@
 
       .cta-btns
         display: flex
+        align-items: center 
         gap: 2.4rem
 
         .cta-btn
@@ -112,6 +59,63 @@
 
           .svg-cta
             @include svg-cta
+
+.burger-menu
+  display: none
+  width: 42px
+  background: transparent
+  border: 0
+  flex-direction: column
+  gap: 12px
+
+  .line
+    height: 2px
+    width: 100%
+    background: $white
+
+.blur
+  width: 100vw
+  height: 100vh
+  background: rgba(255, 255, 255, 0.1)
+  backdrop-filter: blur(3px)
+  z-index: 2
+  position: fixed
+  visibility: hidden
+  opacity: 0
+  transition: all 0.3s 
+
+.nav-container-small-screen
+  display: none
+  width: 300px
+  height: 100vh
+  background: $dark-blue
+  right: 0
+  overflow: hidden
+  position: fixed
+  z-index: 3
+
+  button
+    padding: 10px
+    background: transparent
+    border: 0
+    color: $white
+    font-size: 30px
+
+  ul
+    list-style: none
+    width: 100%
+
+    li
+      width: 100%
+      height: 50px
+      display: flex
+      align-items: center
+      justify-content: center
+
+      a
+        @include font-set($nav-link-font, 500, 3.2rem, 2.3rem, null)
+        color: $white
+        text-decoration: none
 
 .flex-column
   display: flex
@@ -192,7 +196,6 @@
   gap: 9.8rem
         
 .hero-txt-side
-  width: calc( 140rem - 75rem )
   display: flex
   flex-direction: column
   justify-content: center
@@ -228,8 +231,14 @@
 .your-data-image
   width: 60rem
 
+.apps-image
+  width: 58rem
+
 .text-center
   text-align: center
+
+.footer-logo
+  width: 19.1rem
 
 .price-list
   margin-top: 6rem
@@ -240,7 +249,6 @@
 
   .price-card
     text-align: left
-    width: calc( 140rem / 3 )
     border-radius: $card-border-radius
 
   .white-card
@@ -346,7 +354,7 @@
     box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1)
 
     .text-part
-      width: 39.1rem
+      width: 36.1rem
       display: flex
       flex-direction: column
       padding-bottom: 4rem
@@ -383,7 +391,7 @@
     background: $light-blue
 
     .text-part
-      width: 39.1rem
+      width: 36.1rem
       display: flex
       flex-direction: column
       padding-bottom: 4rem
@@ -539,4 +547,5 @@
           &:hover
             text-decoration: underline
 
-
+button
+  cursor: pointer !important

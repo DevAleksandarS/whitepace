@@ -5,15 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/whitepace.css" />
+    <script defer src="./script/script.js"></script>
     <title>Whitepace</title>
   </head>
   <body>
+    <div class="blur"></div>
+
+    <div class="nav-container-small-screen">
+      <button class="exit">X</button>
+
+      <ul>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </div>
+
     <nav class="navbar">
       <div class="navbar-container">
         <img class="logo" src="./images/logo.png" alt="logo" />
 
         <div class="navbar-btns">
-          <ul class="navbar-menu">
+          <ul class="navbar-menu hide-on-small-screen">
             <li class="nav-menu">
               <a href="#" class="nav-menu-links"
                 >Products
@@ -121,6 +135,14 @@
                   stroke-linejoin="round"
                 />
               </svg>
+            </button>
+
+            <button class="burger-menu">
+              <div class="line"></div>
+
+              <div class="line"></div>
+
+              <div class="line"></div>
             </button>
           </div>
         </div>
@@ -612,13 +634,21 @@
         </div>
 
         <div class="sponsors-images">
-          <img src="./images/apple-logo.png" alt="apple" />
+          <img class="apple-logo" src="./images/apple-logo.png" alt="apple" />
 
-          <img src="./images/microsoft-logo.png" alt="microsoft" />
+          <img
+            class="microsoft-logo"
+            src="./images/microsoft-logo.png"
+            alt="microsoft"
+          />
 
-          <img src="./images/slack-logo.png" alt="slack" />
+          <img class="slack-logo" src="./images/slack-logo.png" alt="slack" />
 
-          <img src="./images/google-logo.png" alt="google" />
+          <img
+            class="google-logo"
+            src="./images/google-logo.png"
+            alt="google"
+          />
         </div>
       </div>
     </section>
@@ -626,7 +656,7 @@
     <section class="blue-section">
       <img class="vector" src="./images/apps-vector.png" />
 
-      <div class="container">
+      <div class="container gap100">
         <img class="apps-image" src="./images/apps-image.png" alt="Apps" />
 
         <div class="text-side">
@@ -785,7 +815,7 @@
       <div class="footer-container">
         <div class="footer-flex">
           <div>
-            <img src="./images/logo.png" alt="Logo" />
+            <img class="footer-logo" src="./images/logo.png" alt="Logo" />
             <p class="under-logo-text">
               whitepace was created for the new ways we live and work. We make a
               better workspace around the world
