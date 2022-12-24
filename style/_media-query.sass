@@ -57,11 +57,22 @@
   h3
     text-align: center !important
 
+  li
+
+    p
+      text-align: start !important
+
+  .work-together-image
+    margin-right: 0 !important
+
 @media ( max-width: 800px  )
   .testimonials
     z-index: 2
     width: 100vw
     overflow-x: scroll
+
+    &::-webkit-scrollbar
+      height: 0
 
 @media ( max-width: 785px  )
   .navbar-container
@@ -104,3 +115,68 @@
     .google-logo
       height: 69px !important
       width: 211px !important
+
+  .footer-flex
+    flex-wrap: wrap !important
+    align-items: center
+    justify-content: center
+
+    div
+      text-align: center
+
+@media ( max-width: 450px  )
+  .navbar-container
+    width: 285px !important
+  
+  .container
+    width: 285px !important
+
+  .white-section
+    padding: 10rem 0 !important
+
+  .blue-section
+    padding: 10rem 0 !important
+
+  .footer-container
+    width: 285px !important
+
+  .footer-flex
+    flex-direction: column
+
+  .terms
+    display: flex !important
+    flex-wrap: wrap !important
+    align-items: center
+    justify-content: center
+
+  .hero-image
+    width: 285px !important
+    height: calc( 285px - 100px ) !important
+
+  .project-menagment-img
+    width: 285px !important
+    height: calc( 285px - 100px ) !important
+
+  .work-together-image
+    width: 285px !important
+    height: calc( 285px - 25px ) !important
+
+  .extension-image
+    width: 285px !important
+    height: calc( 285px - 50px ) !important
+
+  .customisable-image
+    width: 285px !important
+    height: calc( 285px - 100px ) !important
+
+  .apps-image
+    width: 285px !important
+    height: calc( 285px - 50px ) !important
+
+  .price-list
+    width: 423px !important
+    overflow-x: scroll 
+
+@media ( max-width: 335px  )
+  .free-trial-section
+    width: auto !important
